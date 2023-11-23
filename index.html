@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Sandbox</title>
+</head>
+<body>
+    <script>
+    //Creating Objects with JavaScript
+    
+    var myDog = {
+        "name": "Gino",
+        "age": "5",
+        "heigh": "35",
+        "breed": "Bealgle"
+    };
+//Accessing Properties: Dot notation
+console.log(myDog.name);
+console.log(myDog.age);
+console.log(myDog.heigh);
+console.log(myDog.breed);
+
+
+    //Another example
+    var myObject = {
+        5: "five"
+    };
+
+//Accessing Properties: Bracket notation
+
+var myNotebook = {
+    "color": "green",
+    "category": "3",
+    "number of pages": 200,
+    "number of sheets": 100
+
+};
+console.log(myNotebook["color"]);
+console.log(myNotebook["category"]);
+console.log(myNotebook["number of pages"]);
+console.log(myNotebook["number of sheets"]);
+
+//Accessing Properties: Variables
+var results = {
+    1: "nora256",
+    2: "gino577",
+    3: "estef543",
+    4: "kiara566"
+};
+
+var position = 1;
+
+console.log(results[position]);
+
+//Updating properties:
+var backpack = {
+    "color": "Blue",
+    "size": "Medium",
+    "content": ["bottle of water", "notebooks"]
+};
+
+console.log(backpack.color); //Blue
+
+backpack.color = "green";
+console.log(backpack.color);
+
+console.log(backpack.content);
+
+//Adding information to object (Array)
+
+backpack.content.push("laptop");
+console.log(backpack.content);
+
+//Creating a complete new array
+backpack.content = [];
+console.log(backpack.content);
+
+//Addint properties:
+
+var course = {
+    "title": "Learn JavaScript from scratch",
+    "language": "english",
+    "duration": 30
+};
+
+course.views = 34500;
+course["author"] = "Ing. Lenin_Chavez";
+
+console.log(course.views);
+console.log(course.author);
+
+//Deleting properties
+console.log(course.duration); //Accessing the property prior to delete process (30)
+delete course.duration;
+console.log(course.duration); //Accessing the property after to delete process (Undefine)
+console.log(course);
+
+//Another example
+console.log(course.language);
+delete course["language"];
+console.log(course.language);
+
+
+//Objects for search
+function searchQuimicalElement (symbol) {
+    var quimicalElement = "";
+
+//Restructuring switch statement by crating an Object in JavaScript.
+
+var quimicalSymbols = {
+
+    "Al": "Aluminium",
+    "S": "Azufre",
+    "Cl": "Cloro",
+    "He": "Helio",
+    "B": "Boro",
+    "Li": "Litio",
+
+};
+
+return quimicalSymbols[symbol];
+
+}
+
+console.log(searchQuimicalElement("Al"));
+console.log(searchQuimicalElement("S"));
+console.log(searchQuimicalElement("Cl"));
+console.log(searchQuimicalElement("He"));
+console.log(searchQuimicalElement("B"));
+console.log(searchQuimicalElement("Li"));
+
+
+
+//Verifying Properties
+
+var myBookshelf = {
+    "color": "green",
+    "category": 3,
+    "price": 4.56
+
+
+};
+
+console.log(myBookshelf.hasOwnProperty("color"));
+console.log(myBookshelf.hasOwnProperty("origin"));
+
+//Verifying property using a function 
+
+function verifyProperty (obj, property){
+    if (obj.hasOwnProperty(property)){
+        return "Property: " + obj[property];
+    }else {
+        return "The object does not have this property";
+    }
+
+
+}
+var myBookshelf = {
+    "color": "green",
+    "category": 3,
+    "price": 4.56
+};
+
+console.log(verifyProperty(myBookshelf, "color"));
+console.log(verifyProperty(myBookshelf, "origin"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
